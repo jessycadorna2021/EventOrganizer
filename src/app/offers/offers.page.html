@@ -1,0 +1,337 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Customized Services (Please customize your event...)
+    </ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="secondary">
+	<form id="#form">
+		<ion-card-content>
+			<ion-item style="width: 99%; float: left; --background: rgb(57,108,147);">
+		        <ion-label>Events and Services</ion-label>
+		    </ion-item>
+		    <ion-item style="width: 33%; float: left;">
+		        <ion-label position="floating">Occasion</ion-label>
+		        <ion-input name="ocassion" [(ngModel)]="cus_ocassion">
+				    </ion-input>
+		    </ion-item>
+		    <ion-item style="width: 33%; float: left;">
+		        <ion-label position="floating" >
+		        	Reception/Venue
+		        </ion-label>
+		        <ion-select name="venue" [(ngModel)]="cus_venue" placeholder="Select One">
+				    <ion-select-option>
+				    	Tacloban City Convention Center . . . . Php10000.00
+				    </ion-select-option>
+				    <ion-select-option>
+				    	Saint Joseph Parish Social Hall Barugo . . . . Php8000.00
+				    </ion-select-option>
+				    <ion-select-option>
+				    	Don Simplecio Gymnasium Barugo . . . . Php6000.00
+				    </ion-select-option>
+				    <ion-select-option>
+				    	Kangara Gymnasium Carigara . . . . Php8000.00
+				    </ion-select-option>
+				    <ion-select-option>
+				    	Tunga Social Hall . . . . Php7000.00
+				    </ion-select-option>
+				</ion-select>
+		    </ion-item>
+		    <ion-item style="width: 33%; float: left">
+		        <ion-label position="floating" >
+		        	Master of Ceremony(MC)
+		        </ion-label>
+		        <ion-select name="mc" [(ngModel)]="cus_mc" placeholder="Select One">
+				    <ion-select-option>
+				    	Myrna Aguihap . . . . . Php2000.00
+				    </ion-select-option>
+				    <ion-select-option>
+				    	Ryan Azuro . . . . . . . Php2000.00
+				    </ion-select-option>
+				    <ion-select-option>
+				    	KC Asis . . . . . . .  . . . Php2000.00
+				    </ion-select-option>
+				</ion-select>
+		    </ion-item>
+		    <ion-item style="width: 33%; float: left;">
+		        <ion-label position="floating" >
+		        	Decoration/Layouts
+		        </ion-label>
+		        <ion-select name="decor" [(ngModel)]="cus_decor" placeholder="Select One">
+				    <ion-select-option>
+				    	Chiqui Cher . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . Php10000.00
+				    </ion-select-option>
+				    <ion-select-option >
+				    	Aljhon Designs And Layouts . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . Php10000.00
+				    </ion-select-option>
+				    <ion-select-option >
+				    	Chiqui Cher . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . Php10000.00
+				    </ion-select-option>
+				</ion-select>
+		    </ion-item>
+		    <ion-item style="width: 33%; float: left;">
+		        <ion-label position="floating" >
+		        	Entertainment
+		        </ion-label>
+		        <ion-select name="ent" [(ngModel)]="cus_ent" placeholder="Select One">
+				    <ion-select-option>
+				    	Tekla(comedian) . . . . . . Php5000.00
+				    </ion-select-option>
+				    <ion-select-option>
+				    	Magician . . . . . . Php4000.00
+				    </ion-select-option>
+				    <ion-select-option>
+				    	Clown . . . . . . Php6000.00
+				    </ion-select-option>
+				    <ion-select-option>
+				    	Singer . . . . . . Php5000.00
+				    </ion-select-option>
+				    <ion-select-option>
+				    	Dancer . . . . . . Php7000.00
+				    </ion-select-option>
+				</ion-select>
+		    </ion-item>
+		    <ion-item style="width: 33%; float: left;">
+		        <ion-label position="floating" >
+		        	Sound System
+		        </ion-label>
+		        <ion-select name="sounds" [(ngModel)]="cus_sounds" placeholder="Select One">
+				    <ion-select-option>
+				    	Pascual Disco Mobile
+				    </ion-select-option>
+				    <ion-select-option>
+				    	Gam Disco Mobile
+				    </ion-select-option>
+				    <ion-select-option>
+				    	Local Band
+				    </ion-select-option>
+				</ion-select>
+		    </ion-item>
+		    <ion-item style="width: 33%; float: left;">
+		        <ion-label position="floating" >
+		        	Catering
+		        </ion-label>
+		        <ion-select name="cater" [(ngModel)]="cus_cater" placeholder="Select One">
+				    <ion-select-option>
+				    	Athelo Catering Services
+				    </ion-select-option>
+				    <ion-select-option>
+				    	Joey Catering Services
+				    </ion-select-option>
+				    <ion-select-option>
+				    	Epin's Catering Services
+				    </ion-select-option>
+				</ion-select>
+		    </ion-item>
+		    <ion-item style="width: 33%; float: left;">
+		        <ion-label position="floating" >
+		        	Photography/Videography
+		        </ion-label>
+		        <ion-select name="videograph" [(ngModel)]="cus_videograph" placeholder="Select One">
+				    <ion-select-option>
+				    	Louie Ramos Tinio Photography . . . . .Php15000.00
+				    </ion-select-option>
+				    <ion-select-option>
+				    	Nathan Guy . . . . . . . . . . . . . . . . . . . Php15000.00
+				    </ion-select-option>
+				    <ion-select-option>
+				    	 Memoclips . . . . . Php20000.00
+				    </ion-select-option>
+				</ion-select>
+		    </ion-item>
+		    <ion-item style="width: 33%; float: left;">
+		        <ion-label position="floating" >
+		        	Ushers/Usherette
+		        </ion-label>
+		        <ion-select name="ushers" [(ngModel)]="cus_ushers" placeholder="Select One">
+				    <ion-select-option>
+				    	Greg Bael . . . . . Php500.00
+				    </ion-select-option>
+				    <ion-select-option>
+				    	Jun Agramon . . . . . Php500.00
+				    </ion-select-option>
+				    <ion-select-option>
+				    	Gina Alido. . . . . Php500.00
+				    </ion-select-option>
+				</ion-select>
+		    </ion-item>
+		    <ion-item style="width: 99%; float: left;  --background: rgb(57,108,147);">
+		        <ion-label>Menu</ion-label>
+		    </ion-item>
+		    <ion-item style="width: 33%; float: left;">
+		        <ion-label position="floating">Beef Menu</ion-label>
+		        <ion-select name="beef" [(ngModel)]="cus_beef" placeholder="Select One">
+				    <ion-select-option>
+				    	Beef Steak
+				    </ion-select-option>
+				    <ion-select-option >
+				    	Beef with Mushroom
+				    </ion-select-option>
+				    <ion-select-option>
+				    	Beef Kalderita
+				    </ion-select-option>
+				    <ion-select-option>
+				    	Beef with Oyster Sauce
+				    </ion-select-option>
+				    <ion-select-option>
+				    	Beef Morcon
+				    </ion-select-option>
+				</ion-select>
+			</ion-item>
+			<ion-item style="width: 33%; float: left;">
+				<ion-label position="floating">Chicken Menu</ion-label>
+		        <ion-select name="chicken" [(ngModel)]="cus_chicken" placeholder="Select One">
+				    <ion-select-option>
+				    	Fried/Buttered Chicken
+				    </ion-select-option>
+				    <ion-select-option >
+				    	Crunchy Chicken
+				    </ion-select-option>
+				    <ion-select-option>
+				    	Chicken Roll
+				    </ion-select-option>
+				    <ion-select-option>
+				    	Chicken Curry
+				    </ion-select-option>
+				    <ion-select-option>
+				    	Chicken Afritada
+				    </ion-select-option>
+				</ion-select>
+			</ion-item>
+			<ion-item style="width: 33%; float: left;">
+				<ion-label position="floating">Fish Menu</ion-label>
+		        <ion-select name="fish" [(ngModel)]="cus_fish" placeholder="Select One">
+				    <ion-select-option>
+				    	Fish Fellit with Tartar Sauce
+				    </ion-select-option>
+				    <ion-select-option >
+				    	Fish Fellit with Sweet & Sour Sauce
+				    </ion-select-option>
+				    <ion-select-option>
+				    	Fish with Tausi
+				    </ion-select-option>
+				    <ion-select-option>
+				    	Fish Steak
+				    </ion-select-option>
+				    <ion-select-option>
+				    	Fish with Mayo(steamed)
+				    </ion-select-option>
+				</ion-select>
+			</ion-item>
+			<ion-item style="width: 33%; float: left;">
+				<ion-label position="floating">Pasta</ion-label>
+		        <ion-select name="pasta" [(ngModel)]="cus_pasta" placeholder="Select One">
+				    <ion-select-option>
+				    	Lasagna
+				    </ion-select-option>
+				    <ion-select-option >
+				    	Baked Macaroni
+				    </ion-select-option>
+				    <ion-select-option>
+				    	Spaghetti
+				    </ion-select-option>
+				    <ion-select-option>
+				    	Carbonara
+				    </ion-select-option>
+				</ion-select>
+			</ion-item>
+			<ion-item style="width: 33%; float: left;">
+				<ion-label position="floating">Pork Menu</ion-label>
+		        <ion-select name="pork" [(ngModel)]="cus_pork" placeholder="Select One">
+				    <ion-select-option>
+				    	Pork in Oyster Sauce
+				    </ion-select-option>
+				    <ion-select-option >
+				    	Pork Afritada
+				    </ion-select-option>
+				    <ion-select-option>
+				    	Pork Adobo
+				    </ion-select-option>
+				    <ion-select-option>
+				    	Pork Roll
+				    </ion-select-option>
+				    <ion-select-option>
+				    	Pork Hamonado
+				    </ion-select-option>
+				</ion-select>
+			</ion-item>
+			<ion-item style="width: 33%; float: left;">
+				<ion-label position="floating">Pancit</ion-label>
+		        <ion-select name="pancit" [(ngModel)]="cus_pancit"  placeholder="Select One">
+				    <ion-select-option>
+				    	Canton
+				    </ion-select-option>
+				    <ion-select-option >
+				    	Bam-i
+				    </ion-select-option>
+				    <ion-select-option>
+				    	Bihon
+				    </ion-select-option>
+				    <ion-select-option>
+				    	Miki-bihon
+				    </ion-select-option>
+				</ion-select>
+			</ion-item>
+			<ion-item style="width: 33%; float: left;">
+				<ion-label position="floating">Vegetables</ion-label>
+			    <ion-select name="veges" [(ngModel)]="cus_veges" placeholder="Select One">
+				    <ion-select-option>
+				    	Ampalaya Con Karne
+				    </ion-select-option>
+				    <ion-select-option >
+				    	Chopsuey
+				    </ion-select-option>
+				    <ion-select-option>
+				    	Assorted Buttered Vegetable
+				    </ion-select-option>
+				</ion-select>
+			</ion-item>
+			<ion-item style="width: 33%; float: left;">
+				<ion-label position="floating">Other Sea Foods</ion-label>
+		        <ion-select name="seafoods" [(ngModel)]="cus_seafoods" placeholder="Select One">
+				    <ion-select-option>
+				    	Crab Omelet
+				    </ion-select-option>
+				    <ion-select-option >
+				    	Stuffed Shrimp
+				    </ion-select-option>
+				    <ion-select-option>
+				    	Shrimp Roll
+				    </ion-select-option>
+				    <ion-select-option>
+				    	Calamares
+				    </ion-select-option>
+				    <ion-select-option>
+				    	Shrimp with Peas & White Sauce
+				    </ion-select-option>
+				</ion-select>
+			</ion-item>
+			<ion-item style="width: 33%; float: left;">
+				<ion-label position="floating">Desserts</ion-label>
+		        <ion-select name="desserts" [(ngModel)]="cus_desserts" placeholder="Select One">
+				    <ion-select-option>
+				    	Fresh Fruits
+				    </ion-select-option>
+				    <ion-select-option >
+				    	Fruit Salad
+				    </ion-select-option>
+				    <ion-select-option>
+				    	Buko Pandan
+				    </ion-select-option>
+				    <ion-select-option>
+				    	Peach n' Jello
+				    </ion-select-option>
+				    <ion-select-option>
+				    	Mango Bango
+				    </ion-select-option>
+				</ion-select>
+			</ion-item>
+	          	<ion-button expands="block" style="width: 8%; margin-left: 90%; float: left;" routerLink="/customizeregister" (click)="insertDataToCustomizedrec()" color="success">Submit</ion-button>
+		</ion-card-content>
+	</form>
+</ion-content>

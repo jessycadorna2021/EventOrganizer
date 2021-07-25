@@ -1,0 +1,45 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-title style="color: black">
+      EVENT ORGANIZER
+    </ion-title>
+    <ion-buttons routerLink="/packagetransactions" slot="start">
+      <ion-button>
+      <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons  style="color: black" routerLink="/admin" slot="end">
+      <ion-button >LOG OUT</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="secondary" padding>
+  <div class="content">
+          <h4 style="font-size: 25px; color: white; font-family: monospace; text-shadow: 1px 2px 1px blue; text-align: center;">Transaction List For Birthday Package</h4> 
+          <ion-grid>
+               <ion-row>
+                    <ion-col class="th">ID.</ion-col>
+                    <ion-col class="th">Birthday Package</ion-col>
+                    <ion-col class="th">Menu</ion-col>
+                    <ion-col class="th">Contact Person</ion-col>
+                    <ion-col class="th">Address</ion-col>
+                    <ion-col class="th">Contact Number</ion-col>
+                    <ion-col class="th">ACTION</ion-col>
+               </ion-row>
+               <ion-row *ngFor="let getbirthday of getbirthdays">
+                    <ion-col>{{getbirthday.id}}</ion-col>
+                    <ion-col>{{getbirthday.birthday_package}}</ion-col>
+                    <ion-col>{{getbirthday.food_menu}}</ion-col>
+                    <ion-col>{{getbirthday.contact_person}}</ion-col>
+                    <ion-col>{{getbirthday.address}}</ion-col>
+                    <ion-col>{{getbirthday.contact_number}}</ion-col>
+                    <ion-col>
+                         <ion-button style="height: 25px; width: 70px; color: white; font-weight: bolder; font-size: 12px; --background:green;">Edit</ion-button>
+                         <ion-button style="height: 25px; width: 70px; color: white; font-weight: bolder; font-size: 12px; --background:red;">Delete</ion-button>
+                    </ion-col>
+               </ion-row>
+
+          </ion-grid>
+          </div>
+</ion-content>

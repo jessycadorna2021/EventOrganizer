@@ -1,0 +1,42 @@
+ion-toolbar{
+	--background: pink;
+}
+.content{
+	width: 95%;
+	height: 520px;
+	background: rgb(149, 118,239);
+	color: #fff;
+	top: 50%;
+	left: 50%;
+	position: absolute;
+	transform: translate(-50%,-50%);
+	box-sizing: border-box;
+
+	}
+ion-grid{
+			margin: auto;
+			font-size: 15px;
+			width:95%;
+			padding: 0;
+			border: 1px solid;
+			text-align: center;
+		}
+
+		.th{
+			background-color: #192965;
+			color: white;
+			padding: 5px 2px;
+			border: 1px solid;
+		}		
+		ion-grid ion-row:nth-child(odd){
+			background-color: #006666; 
+			text-align: center;
+
+		}
+		ion-grid ion-row:hover{
+			background-color: rgb(32,147,115);
+			color: white;
+		}
+		ion-col{
+			border: 1px solid;
+		}

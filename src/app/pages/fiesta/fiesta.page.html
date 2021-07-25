@@ -1,0 +1,80 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title style="color: black">
+      FIESTA 
+    </ion-title>
+    <ion-buttons routerLink="/servicepack" slot="start">
+      <ion-button>
+      <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="secondary">
+	<form id="#form" style="width: 100%; float: left; color: green; ">
+		<ion-card-content>
+		    <ion-item color="primary" style="width: 33%; float: left; color: green; ">
+		        <ion-label position="floating">Theme: </ion-label>
+		        <ion-input  type="text" value="Fiesta" shape="round"></ion-input> 
+		    </ion-item>
+			<ion-item color="primary" style="width: 33%; float: left; color: green;">
+			    <ion-label position="floating">Sound System</ion-label>
+			    <ion-input  type="text" value="Athelo Catering Services(Minimum of 50 guests)" shape="round"></ion-input> 
+			</ion-item>
+			<ion-item color="primary" style="width: 33%; float: left; color: green;">
+			    <ion-label position="floating">Catering</ion-label>
+			    <ion-input  type="text" value="Athelo Catering Services(Minimum of 50 guests)" shape="round"></ion-input> 
+			</ion-item>
+			<ion-item color="primary" style="width: 99%; height: 100%; color: green;">
+				<ion-label position="floating">CHOOSE YOUR MENU: </ion-label>
+			    <ion-select required placeholder="Select One">
+			    	<ion-select-option>
+			    		Menu01 Php300.00/head
+			    	</ion-select-option>
+			    	<ion-select-option>
+			    		Menu02 Php400.00/head
+			    	</ion-select-option>
+			    	<ion-select-option>
+			    		Menu03 Php400.00/head
+			    	</ion-select-option>
+			    </ion-select>
+			</ion-item>
+			<ion-item color="primary" style="width: 33%; height: 100%; float: left; color: green;">
+			    <ion-label position="floating">Menu 01 Php300.00/head</ion-label>
+			    <ion-input  type="text" value="- beef with mushroom" shape="round"></ion-input> 
+			    <ion-input  type="text" value="- pork with oyster sauce" shape="round"></ion-input>
+			    <ion-input  type="text" value="- fish fillet with sweet & sour sauce" shape="round"></ion-input>
+			    <ion-input  type="text" value="- bam-i or chopsuey" shape="round"></ion-input>
+			    <ion-input  type="text" value="- dessert" shape="round"></ion-input>
+			    <ion-input  type="text" value="- plain rice" shape="round"></ion-input>
+			    <ion-input  type="text" value="- drinks" shape="round"></ion-input>
+			    <ion-input  type="text" value="- - - - - - -" shape="round"></ion-input> 
+			</ion-item>
+			<ion-item color="primary" style="width: 33%; height: 100%; float: left; color: green;">
+			    <ion-label position="floating">Menu 02 Php300.00/head</ion-label>
+			    <ion-input  type="text" value="- beef stew" shape="round"></ion-input> 
+			    <ion-input  type="text" value="- chicken roll" shape="round"></ion-input>
+			    <ion-input  type="text" value="- stuffed shrimp" shape="round"></ion-input>
+			    <ion-input  type="text" value="- sweet & sour fish" shape="round"></ion-input>
+			    <ion-input  type="text" value="- bam-i or chopsuey" shape="round"></ion-input>
+			    <ion-input  type="text" value="- dessert" shape="round"></ion-input>
+			    <ion-input  type="text" value="- plain rice" shape="round"></ion-input>
+			    <ion-input  type="text" value="- drinks" shape="round"></ion-input> 
+			</ion-item>
+			<ion-item color="primary" style="width: 33%; height: 100%; float: left; color: green;">
+			    <ion-label position="floating">Menu 03 Php400.00/head</ion-label>
+			    <ion-input  type="text" value="- beef with mushroom" shape="round"></ion-input> 
+			    <ion-input  type="text" value="- crunchy chicken" shape="round"></ion-input>
+			    <ion-input  type="text" value="- shrimp roll" shape="round"></ion-input>
+			    <ion-input  type="text" value="- bam-i or chopsuey" shape="round"></ion-input>
+			    <ion-input  type="text" value="- fruit salad" shape="round"></ion-input>
+			    <ion-input  type="text" value="- plain" shape="round"></ion-input>
+			    <ion-input  type="text" value="- softdrinks" shape="round"></ion-input> 
+			    <ion-input  type="text" value="- - - - - - - " shape="round"></ion-input> 
+			</ion-item>
+          <ion-button style="width: 10%; margin-top: 1%; color: green;" routerLink="/records" color="success" expands="block" >Avail</ion-button>
+		</ion-card-content>
+	</form>
+	
+</ion-content>

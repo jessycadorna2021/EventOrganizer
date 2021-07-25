@@ -1,0 +1,338 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      T R A N S A C T I O N &nbsp;&nbsp; F O R M S 
+    </ion-title>
+    <ion-buttons routerLink="/offers" slot="start">
+      <ion-button>
+      <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content color="secondary">
+	<center>
+		<div style="float: left; width: 100%; ">
+			<form id="#form" method="POST" style="width: 80%;">
+			<ion-card-content><br>
+				<ion-item style="--background: rgb(49,156,162); width: 100%; text-align: center">
+					<ion-label style="color: black">CUSTOMER'S INFORMATION FOR WEDDING SERVICES</ion-label>
+				</ion-item>
+				<ion-item>
+					<ion-label style="width: 60%; color: red">Kindly fill-in the needed information to avail the service...</ion-label>
+				</ion-item>
+				<ion-item style="width: 50%; float: left;">
+			        <ion-label style="color: black">Bride's Name: </ion-label>
+			        <ion-input name="bride" required [(ngModel)]="bride_name" type="text" shape="round"></ion-input> 
+			    </ion-item>
+			    <ion-item style="width: 50%; float: left;">
+				    <ion-label>Groom's Name:</ion-label>
+				        <ion-input name="groom" [(ngModel)]="groom_name"  type="text" shape="round"></ion-input>
+				</ion-item>
+				<ion-item style="width: 50%; float: left;">
+				    <ion-label>Wedding Venue:</ion-label>
+				        <ion-input name="venue" [(ngModel)]="wedding_venue"  type="text" shape="round"></ion-input>
+				</ion-item>
+				<ion-item style="width: 50%; float: left;">
+				    <ion-label>Contact Person:</ion-label>
+				        <ion-input name="cperson" [(ngModel)]="contact_person" type="text" shape="round"></ion-input>
+				</ion-item>
+				<ion-item style="width: 50%; float: left;">
+				    <ion-label>Address:</ion-label>
+				        <ion-input name="caddress" [(ngModel)]="address" type="text" shape="round"></ion-input>
+				</ion-item>
+				<ion-item style="width: 50%; float: left;">
+				    <ion-label>Contact number:</ion-label>
+				        <ion-input name="cnumber" [(ngModel)]="contact_number" type="text" shape="round"></ion-input>
+				</ion-item>
+				<ion-item style="width: 50%; float: left;">
+				    <ion-label>Number of Visitors:</ion-label>
+				        <ion-input  name="num" [(ngModel)]="number_of_visitors"  type="number" shape="round"></ion-input>
+				</ion-item>
+				<ion-item style="width: 50%; float: left;">
+				    <ion-label>Wedding Time:</ion-label>
+				        <ion-input name="wedtime" [(ngModel)]="wedding_time" type="Time" shape="round"></ion-input>
+				</ion-item>
+				<ion-item style="width: 50%; float: left;">
+				    <ion-label>G-mail account:</ion-label>
+				        <ion-input name="gmail" [(ngModel)]="gmail_account" type="mail" required shape="round"></ion-input>
+				</ion-item>
+				<ion-item style="width: 50%; float: left;">
+				    <ion-label>Facebook account:</ion-label>
+				        <ion-input name="fb" [(ngModel)]="facebook_account" type="text" shape="round"></ion-input>
+				</ion-item>
+				<ion-item style="width: 50%; float: left;">
+				    <ion-label >Transaction Date:</ion-label>
+				        <ion-input name="transactdate" [(ngModel)]="transaction_date" type="Date" shape="round"></ion-input>
+				</ion-item>
+				<ion-item style="width: 50%; float: left;">
+				    <ion-label>Wedding Date:</ion-label>
+				        <ion-input name="weddate" [(ngModel)]="wedding_date" type="Date" shape="round"></ion-input>
+				</ion-item>
+				<ion-item style="width: 100%; float: left; color: red">
+				    <ion-label style="font-size: 12px;">Note: <i>Some other information needed for this event will be ask through a call/message on your given contacts. Thank you."</i></ion-label>
+				</ion-item>
+	          <ion-button style="width: 20%;  float: left; margin-top: 1%; margin-left: 28%;" type="submit" (click)="insertDataToCustomizedweddingrecord()"  color="success" expands="block" >Avail</ion-button>
+	          <ion-button style="width: 20%; float: left; margin-top: 1%;" routerLink="/wedding" color="danger" expands="block" >Cancel</ion-button>
+			</ion-card-content>
+		</form>
+	</div>
+
+	<div style="float: left; width: 100%;"><br> 
+		<form id="#form" style="width: 80%; float: left; color: green; margin-left: 10%; margin-top: 1%;">
+		<ion-card-content>
+			<ion-item style="--background: rgb(49,156,162); width: 100%; text-align: center">
+				<ion-label style="color: black">CUSTOMER'S INFORMATION FOR ANNIVERSARY SERVICES</ion-label>
+			</ion-item>
+			<ion-item>
+				<ion-label style="width: 60%; color: red">Kindly fill in the needed information...</ion-label>
+			</ion-item>
+		    <ion-item style="width: 50%; float: left;">
+		        <ion-label style="color: black">Type of anniversary: </ion-label>
+		        <ion-input  type="text" name="anniv_type" [(ngModel)]="type_of_anniversary" shape="round"></ion-input> 
+		    </ion-item>
+		    <ion-item style="width: 50%; float: left;">
+		        <ion-label style="color: black">Number of visitors: </ion-label>
+		        <ion-input  type="number" name="num" [(ngModel)]="number_of_visitors" shape="round"></ion-input> 
+		    </ion-item>
+		    
+			<ion-item style="width: 100%; float: left;">
+			    <ion-label>Address:</ion-label>
+			        <ion-input  type="text" name="address" [(ngModel)]="address" shape="round"></ion-input>
+			</ion-item>
+			<ion-item style="width: 50%; float: left;">
+		        <ion-label>Number of anniversary: </ion-label>
+		        <ion-input  type="number" name="anniv_num" [(ngModel)]="anniv_num" shape="round"></ion-input> 
+		    </ion-item>
+			<ion-item style="width: 50%; float: left;">
+			    <ion-label>Contact Person:</ion-label>
+			        <ion-input  type="text" name="cperson" [(ngModel)]="contact_person" shape="round"></ion-input>
+			</ion-item>
+			<ion-item style="width: 50%; float: left;">
+			    <ion-label>Contact number:</ion-label>
+			        <ion-input  type="text" name="cnumber" [(ngModel)]="contact_number" shape="round"></ion-input>
+			</ion-item>
+			<ion-item style="width: 50%; float: left;">
+			    <ion-label >Transaction Date:</ion-label>
+			    <ion-input  type="Date" name="transact_date" [(ngModel)]="transaction_date" shape="round"></ion-input>
+			</ion-item>
+			<ion-item style="width: 50%; float: left;">
+			    <ion-label>G-mail account:</ion-label>
+			      <ion-input  type="mail" name="gmail" [(ngModel)]="gmail_account" required shape="round"></ion-input>
+			</ion-item>
+			<ion-item style="width: 50%; float: left;">
+			    <ion-label>Date of celebration:</ion-label>
+			        <ion-input  type="Date" name="celeb_date" [(ngModel)]="date_of_celebration" shape="round"></ion-input>
+			</ion-item>
+			<ion-item style="width: 50%; float: left;">
+			    <ion-label>Facebook account:</ion-label>
+			        <ion-input  type="text" name="fb" [(ngModel)]="facebook_account" shape="round"></ion-input>
+			</ion-item>
+			<ion-item style="width: 50%; float: left;">
+			    <ion-label>Time of celebration:</ion-label>
+			        <ion-input  type="Time" name="celeb_time" [(ngModel)]="time_of_celebration" shape="round"></ion-input>
+			</ion-item>
+			<ion-item style="width: 100%; float: left; color: red">
+			    <ion-label style="font-size: 12px;">Note: <i>Some other information needed for this event will be ask through a call/message on your given contacts. Please cooperate."</i></ion-label>
+			</ion-item>
+          <ion-button style="width: 23%;  float: left; margin-top: 1%; margin-left: 26%;" color="success" (click)="insertDataToCustomizedanniversaryrecord()" expands="block" >Avail</ion-button>
+          <ion-button style="width: 23%; float: left; margin-top: 1%;" routerLink="/servicepack" color="danger" expands="block" >Cancel</ion-button>
+		</ion-card-content>
+	</form>
+
+	</div>
+
+	<div style="float: left; width: 100%;"><br> 
+		<form id="#form" style="width: 80%; float: left; color: green; margin-left: 10%; margin-top: 2%;">
+		<ion-card-content>
+			<ion-item style="--background: rgb(49,156,162); width: 100%; text-align: center">
+				<ion-label style="color: black">CUSTOMER'S INFORMATION FOR BIRTHDAY SERVICES</ion-label>
+			</ion-item>
+			<ion-item>
+				<ion-label style="width: 60%; color: red">Kindly fill in the needed information...</ion-label>
+			</ion-item>
+		    <ion-item style="width: 100%; float: left;">
+		        <ion-label>Name of Celebrant: </ion-label>
+		        <ion-input  type="text" name="celebrantname" [(ngModel)]="name_of_celebrant" shape="round"></ion-input> 
+		    </ion-item>
+		    <ion-item style="width: 50%; float: left;">
+		        <ion-label>Sex: </ion-label>
+		        <ion-select  type="text" name="sex" [(ngModel)]="sex" shape="round" placeholder="Select One">
+		        	<ion-select-option>Male</ion-select-option>
+			        <ion-select-option>Female</ion-select-option>
+		        </ion-select> 
+		    </ion-item>
+		    <ion-item style="width: 50%; float: left;">
+		        <ion-label>Date of Birth: </ion-label>
+		        <ion-input  type="date" name="datebirth" [(ngModel)]="date_of_birth" shape="round"></ion-input> 
+		    </ion-item>
+			<ion-item style="width: 50%; float: left;">
+			    <ion-label>Address:</ion-label>
+			        <ion-input  type="text" name="address" [(ngModel)]="address" shape="round"></ion-input>
+			</ion-item>
+			<ion-item style="width: 50%; float: left;">
+			    <ion-label>Theme:</ion-label>
+			        <ion-input  type="text" name="theme" [(ngModel)]="theme" shape="round"></ion-input>
+			</ion-item>
+			<ion-item style="width: 50%; float: left;">
+			    <ion-label>Contact Person:</ion-label>
+			        <ion-input  type="text" name="cperson" [(ngModel)]="contact_person" shape="round"></ion-input>
+			</ion-item>
+			<ion-item style="width: 50%; float: left;">
+		        <ion-label>Number of Vistors: </ion-label>
+		        <ion-input  type="number" name="num" [(ngModel)]="number_of_visitors" shape="round"></ion-input> 
+		    </ion-item>
+			<ion-item style="width: 50%; float: left;">
+			    <ion-label>Contact number:</ion-label>
+			        <ion-input  type="text" name="cnumber" [(ngModel)]="contact_number" shape="round"></ion-input>
+			</ion-item>
+			<ion-item style="width: 50%; float: left;">
+			    <ion-label >Transaction Date:</ion-label>
+			    <ion-input  type="Date" name="transact_date" [(ngModel)]="transaction_date" shape="round"></ion-input>
+			</ion-item>
+			<ion-item style="width: 50%; float: left;">
+			    <ion-label>G-mail account:</ion-label>
+			      <ion-input  type="mail" name="gmail" [(ngModel)]="gmail_account" required shape="round"></ion-input>
+			</ion-item>
+			<ion-item style="width: 50%; float: left;">
+			    <ion-label>Date of celebration:</ion-label>
+			        <ion-input  type="Date" name="celeb_date" [(ngModel)]="date_of_celebration" shape="round"></ion-input>
+			</ion-item>
+			<ion-item style="width: 50%; float: left;">
+			    <ion-label>Facebook account:</ion-label>
+			        <ion-input  type="text" name="fb" [(ngModel)]="facebook_account" shape="round"></ion-input>
+			</ion-item>
+			<ion-item style="width: 50%; float: left;">
+			    <ion-label>Time of celebration:</ion-label>
+			        <ion-input  type="Time" name="celeb_time" [(ngModel)]="time_of_celebration" shape="round"></ion-input>
+			</ion-item>
+			<ion-item style="width: 100%; float: left; color: red">
+			    <ion-label style="font-size: 12px;">Note: <i>Some other information needed for this event will be ask through a call/message on your given contacts. Please cooperate."</i></ion-label>
+			</ion-item>
+          <ion-button style="width: 23%;  float: left; margin-top: 1%; margin-left: 26%;" (click)="insertDataToCustomizedbirthdayrecord()"  color="success" expands="block" >Avail</ion-button>
+          <ion-button style="width: 23%; float: left; margin-top: 1%;" routerLink="/anniversaries" color="danger" expands="block" >Cancel</ion-button>
+		</ion-card-content>
+	</form>
+
+	</div>
+
+	<div style="float: left; width: 100%;"><br>
+		<form id="#form" style="width: 80%; float: left; color: green; margin-left: 10%; margin-top: 1%;">
+		<ion-card-content>
+			<ion-item style="--background: rgb(49,156,162); width: 100%; text-align: center">
+				<ion-label style="color: black">CUSTOMER'S INFORMATION FOR REUNION SERVICES</ion-label>
+			</ion-item>
+			<ion-item>
+				<ion-label style="width: 60%; color: red">Kindly fill in the needed information...</ion-label>
+			</ion-item>
+		    <ion-item style="width: 50%; float: left;">
+		        <ion-label style="color: black">Type of reunion: </ion-label>
+		        <ion-input  type="text" name="r_type" [(ngModel)]="type_of_reunion" shape="round"></ion-input> 
+		    </ion-item>
+		    <ion-item style="width: 50%; float: left;">
+		        <ion-label style="color: black">Number of visitors: </ion-label>
+		        <ion-input  type="number" name="num" [(ngModel)]="number_of_visitors" shape="round"></ion-input> 
+		    </ion-item>
+			<ion-item style="width: 50%; float: left;">
+			    <ion-label>Address:</ion-label>
+			        <ion-input  type="text" name="address" [(ngModel)]="address" shape="round"></ion-input>
+			</ion-item>
+			<ion-item style="width: 50%; float: left;">
+			    <ion-label>Contact Person:</ion-label>
+			        <ion-input  type="text" name="cperson" [(ngModel)]="contact_person" shape="round"></ion-input>
+			</ion-item>
+			<ion-item style="width: 50%; float: left;">
+			    <ion-label>Contact number:</ion-label>
+			        <ion-input  type="text" name="cnumber" [(ngModel)]="contact_number" shape="round"></ion-input>
+			</ion-item>
+			<ion-item style="width: 50%; float: left;">
+			    <ion-label>G-mail account:</ion-label>
+			        <ion-input  type="mail" name="gmail" [(ngModel)]="gmail_account" required shape="round"></ion-input>
+			</ion-item>
+			<ion-item style="width: 50%; float: left;">
+			    <ion-label>Facebook account:</ion-label>
+			        <ion-input  type="text" name="fb" [(ngModel)]="facebook_account" shape="round"></ion-input>
+			</ion-item>
+			<ion-item style="width: 50%; float: left;">
+			    <ion-label >Transaction Date:</ion-label>
+			        <ion-input  type="Date" name="transact_date" [(ngModel)]="transaction_date" shape="round"></ion-input>
+			</ion-item>
+			<ion-item style="width: 50%; float: left;">
+			    <ion-label >Date of celebration:</ion-label>
+			        <ion-input  type="Date" [(ngModel)]="wedding_venue" name="date_of_celebration" shape="round"></ion-input>
+			</ion-item>
+			<ion-item style="width: 50%; float: left;">
+			    <ion-label >Time of celebration:</ion-label>
+			        <ion-input  type="Time" [(ngModel)]="time_of_celebration" name="celeb_time" shape="round"></ion-input>
+			</ion-item>
+			<ion-item style="width: 100%; float: left; color: red">
+			    <ion-label style="font-size: 12px;">Note: <i>Some other information needed for this event will be ask through a call/message on your given contacts. Please cooperate."</i></ion-label>
+			</ion-item>
+          <ion-button style="width: 20%;  float: left; margin-top: 1%; margin-left: 28%;" routerLink="/payment" (click)="insertDataToCustomizedreunionrecord()" color="success" expands="block" >Avail</ion-button>
+          <ion-button style="width: 20%; float: left; margin-top: 1%;" routerLink="/reunion" color="danger" expands="block" >Cancel</ion-button>
+		</ion-card-content>
+	</form>
+	</div>
+
+
+	<div style="float: left; width: 100%;"><br>
+		<form id="#form" style="width: 80%; float: left; color: green; margin-left: 10%; margin-top: 1%;">
+		<ion-card-content>
+			<ion-item style="--background: rgb(49,156,162); width: 100%; text-align: center">
+				<ion-label style="color: black">CUSTOMER'S INFORMATION FOR OTHER SERVICES</ion-label>
+			</ion-item>
+			<ion-item>
+				<ion-label style="width: 60%; color: red">Kindly fill in the needed information...</ion-label>
+			</ion-item>
+		    <ion-item style="width: 50%; float: left;">
+		        <ion-label style="color: black">Event/Ocassion: </ion-label>
+		        <ion-input  type="text" name="ocassion" [(ngModel)]="ocassion" shape="round"></ion-input> 
+		    </ion-item>
+		    <ion-item style="width: 50%; float: left;">
+		        <ion-label style="color: black">Number of visitors: </ion-label>
+		        <ion-input  type="number" name="num" [(ngModel)]="number_of_visitors" shape="round"></ion-input> 
+		    </ion-item>
+			<ion-item style="width: 50%; float: left;">
+			    <ion-label>Address:</ion-label>
+			        <ion-input  type="text" name="address" [(ngModel)]="address" shape="round"></ion-input>
+			</ion-item>
+			<ion-item style="width: 50%; float: left;">
+			    <ion-label>Contact Person:</ion-label>
+			        <ion-input  type="text" name="cperson" [(ngModel)]="contact_person" shape="round"></ion-input>
+			</ion-item>
+			<ion-item style="width: 50%; float: left;">
+			    <ion-label>Contact number:</ion-label>
+			        <ion-input  type="text" name="cnumber" [(ngModel)]="contact_number" shape="round"></ion-input>
+			</ion-item>
+			<ion-item style="width: 50%; float: left;">
+			    <ion-label>G-mail account:</ion-label>
+			        <ion-input  type="mail" name="gmail" [(ngModel)]="gmail_account" required shape="round"></ion-input>
+			</ion-item>
+			<ion-item style="width: 50%; float: left;">
+			    <ion-label>Facebook account:</ion-label>
+			        <ion-input  type="text" name="fb" [(ngModel)]="facebook_account" shape="round"></ion-input>
+			</ion-item>
+			<ion-item style="width: 50%; float: left;">
+			    <ion-label >Transaction Date:</ion-label>
+			        <ion-input  type="Date" name="transact_date" [(ngModel)]="transaction_date" shape="round"></ion-input>
+			</ion-item>
+			<ion-item style="width: 50%; float: left;">
+			    <ion-label >Date of celebration:</ion-label>
+			        <ion-input  type="Date" [(ngModel)]="wedding_venue" name="date_of_celebration" shape="round"></ion-input>
+			</ion-item>
+			<ion-item style="width: 50%; float: left;">
+			    <ion-label >Time of celebration:</ion-label>
+			        <ion-input  type="Time" [(ngModel)]="time_of_celebration" name="celeb_time" shape="round"></ion-input>
+			</ion-item>
+			<ion-item style="width: 100%; float: left; color: red">
+			    <ion-label style="font-size: 12px;">Note: <i>Some other information needed for this event will be ask through a call/message on your given contacts. Please cooperate."</i></ion-label>
+			</ion-item>
+          <ion-button style="width: 20%;  float: left; margin-top: 1%; margin-left: 28%;" routerLink="/payment" (click)="insertDataToCustomizedreunionrecord()" color="success" expands="block" >Avail</ion-button>
+          <ion-button style="width: 20%; float: left; margin-top: 1%;" routerLink="/reunion" color="danger" expands="block" >Cancel</ion-button>
+		</ion-card-content>
+	</form>
+	</div>
+
+</center>
+	
+</ion-content>

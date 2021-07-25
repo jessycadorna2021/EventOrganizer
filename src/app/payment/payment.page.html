@@ -1,0 +1,202 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title style="color: black; ">
+      P A Y A B L E &nbsp;&nbsp;  A M O U N T
+    </ion-title>
+    <ion-buttons style="color: black" slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="contents">
+          <div class="bookbox">
+          <h4 style="font-size: 25px; color: white; font-family: monospace; text-shadow: 1px 2px 1px blue; text-align: center;">Transaction List</h4> 
+
+          <ion-grid>
+               <ion-row>
+                    <ion-col class="th">ID.</ion-col>
+                    <ion-col class="th">Ocasion</ion-col>
+                    <ion-col class="th">ACTION</ion-col>
+               </ion-row>
+               <ion-row *ngFor="let getcustomize of getcustomized">
+                    <ion-col>{{getcustomize.id}}</ion-col>
+                    <ion-col>{{getcustomize.cus_ocassion}}</ion-col>
+                    <ion-col>
+                         <ion-button style="height: 25px; width: 70px; color: white; font-weight: bolder; font-size: 12px; --background:green;">CONFIRM</ion-button>
+                         <ion-button style="height: 25px; width: 70px; color: white; font-weight: bolder; font-size: 12px; --background:red;">CANCEL</ion-button>
+                    </ion-col>
+               </ion-row>
+
+          </ion-grid>
+          </div>
+</ion-content>
+
+<!-- <ion-content color="secondary">
+	<form id="#form" style="width: 60%; float: left; color: black; margin-left: 20%; margin-top: 5%; text-align: center;">
+		<ion-card-content> -->
+			<!-- <ion-item style="--background: rgb(57,108,147); width: 100%; text-align: center">
+				<ion-label style="color: black">CUSTOMER'S INFORMATION</ion-label>
+			</ion-item>
+			<ion-item>
+				<ion-label style="width: 60%; color: red">Thank you for availing our services...</ion-label>
+			</ion-item>
+		    <ion-item style="width: 100%;">
+		        <ion-label style="color: black">Church: </ion-label>
+		        <ion-input  type="text" shape="round"></ion-input> 
+		    </ion-item>
+		    <ion-item style="width: 100%;">
+			    <ion-label>MC:</ion-label>
+			        <ion-input  type="text" shape="round"></ion-input>
+			</ion-item>
+			<ion-item style="width: 100%">
+			    <ion-label>Sound System:</ion-label>
+			        <ion-input  type="text" shape="round"></ion-input>
+			</ion-item>
+			<ion-item style="width: 100%">
+			    <ion-label>Ushers/Usherette:</ion-label>
+			        <ion-input  type="text" shape="round"></ion-input>
+			</ion-item>
+			<ion-item style="width: 100%">
+			    <ion-label>Reception/Venue:</ion-label>
+			        <ion-input  type="text" shape="round"></ion-input>
+			</ion-item>
+			<ion-item style="width: 100%">
+			    <ion-label>Decorations/Layouts:</ion-label>
+			        <ion-input  type="text" shape="round"></ion-input>
+			</ion-item>
+			<ion-item style="width: 100%">
+			    <ion-label>Photography/Videography:</ion-label>
+			        <ion-input  type="text" required shape="round"></ion-input>
+			</ion-item>
+			<ion-item style="width: 100%">
+			    <ion-label>Catering:</ion-label>
+			        <ion-input  type="text" shape="round"></ion-input>
+			</ion-item>
+			<ion-item style="width: 100%">
+			    <ion-label >Menu:</ion-label>
+			        <ion-input  type="text" shape="round"></ion-input>
+			</ion-item>
+			<ion-item style="width: 100%; float: left; color: red">
+			    <ion-label style="font-size: 12px;">Note: <i>Some other information needed for this event will be ask through a call/message on your given contacts. Please cooperate."</i></ion-label>
+			</ion-item>
+          <ion-button style="width: 20%;  float: left; margin-top: 1%; margin-left: 28%;" routerLink="/wedding" color="success" expands="block" >Avail</ion-button>
+          <ion-button style="width: 20%; float: left; margin-top: 1%;" routerLink="/reunion" color="danger" expands="block" >Cancel</ion-button> -->
+          <!-- <table border="1" width="100%">
+          	<tr>
+          		<th colspan="3" style="height: 50px; background-color: rgb(57,108,147);">P A Y M E N T</th>
+          	</tr>
+          	<tr>
+          		<td style="height: 40px; background-color: rgb(234,234,234);">
+          			<ion-label>Service</ion-label>
+          		</td>
+          		<td style="height: 40px; background-color: rgb(234,234,234);">
+          			<ion-label>Company</ion-label>
+          		</td>
+          		<td style="height: 40px; background-color: rgb(234,234,234);">
+          			<ion-label>Price</ion-label>
+          		</td>
+          	</tr>
+          	<tr>
+          		<td style="height: 40px; background-color: rgb(221,221,221);">
+          			<ion-label>Church: </ion-label>
+          		</td>
+          		<td style="height: 40px; background-color: rgb(221,221,221);">
+          			<ion-input></ion-input>
+          		</td>
+          		<td style="height: 40px; background-color: rgb(221,221,221);">
+          			<ion-input></ion-input>
+          		</td>
+          	</tr>
+          	<tr>
+          		<td style="height: 40px; background-color: rgb(234,234,234);">
+          			<ion-label>MC: </ion-label>
+          		</td>
+          		<td style="height: 40px; background-color: rgb(234,234,234);">
+          			<ion-input></ion-input>
+          		</td>
+          		<td style="height: 40px; background-color: rgb(234,234,234);">
+          			<ion-input></ion-input>
+          		</td>
+          	</tr>
+          	<tr>
+          		<td style="height: 40px; background-color: rgb(221,221,221);">
+          			<ion-label>Sound System:: </ion-label>
+          		</td>
+          		<td style="height: 40px; background-color: rgb(221,221,221);">
+          			<ion-input></ion-input>
+          		</td>
+          		<td style="height: 40px; background-color: rgb(221,221,221);">
+          			<ion-input></ion-input>
+          		</td>
+          	</tr>
+          	<tr>
+          		<td style="height: 40px; background-color: rgb(234,234,234);">
+          			<ion-label>Ushers/Usherette: </ion-label>
+          		</td>
+          		<td style="height: 40px; background-color: rgb(234,234,234);">
+          			<ion-input></ion-input>
+          		</td>
+          		<td style="height: 40px; background-color: rgb(234,234,234);">
+          			<ion-input></ion-input>
+          		</td>
+          	</tr>
+          	<tr>
+          		<td style="height: 40px; background-color: rgb(221,221,221);">
+          			<ion-label>Reception/Venue: </ion-label>
+          		</td>
+          		<td style="height: 40px; background-color: rgb(221,221,221);">
+          			<ion-input></ion-input>
+          		</td>
+          		<td style="height: 40px; background-color: rgb(221,221,221);">
+          			<ion-input></ion-input>
+          		</td>
+          	</tr>
+          	<tr>
+          		<td style="height: 40px; background-color: rgb(234,234,234);">
+          			<ion-label>Decorations/Layouts: </ion-label>
+          		</td>
+          		<td style="height: 40px; background-color: rgb(234,234,234);">
+          			<ion-input></ion-input>
+          		</td>
+          		<td style="height: 40px; background-color: rgb(234,234,234);">
+          			<ion-input></ion-input>
+          		</td>
+          	</tr>
+          	<tr>
+          		<td style="height: 40px; background-color: rgb(221,221,221);">
+          			<ion-label>Photography/Videography: </ion-label>
+          		</td>
+          		<td style="height: 40px; background-color: rgb(221,221,221);">
+          			<ion-input></ion-input>
+          		</td>
+          		<td style="height: 40px; background-color: rgb(221,221,221);">
+          			<ion-input></ion-input>
+          		</td>
+          	</tr>
+          	<tr>
+          		<td style="height: 40px; background-color: rgb(221,221,221);">
+          			<ion-label>Catering: </ion-label>
+          		</td>
+          		<td style="height: 40px; background-color: rgb(221,221,221);">
+          			<ion-input></ion-input>
+          		</td>
+          		<td style="height: 40px; background-color: rgb(221,221,221);">
+          			<ion-input></ion-input>
+          		</td>
+          	</tr>
+          	<tr>
+          		<td colspan="2" style="height: 40px; background-color: rgb(221,221,221);">
+          			<ion-label>Payable Amount: </ion-label>
+          		</td>
+          		<td style="height: 40px; background-color: rgb(221,221,221);">
+          			<ion-input></ion-input>
+          		</td>
+          	</tr>
+          </table>
+          <ion-button color="success" style="width: 20%;">OK</ion-button>
+		</ion-card-content>
+	</form>
+ -->
+
+<!-- </ion-content> -->

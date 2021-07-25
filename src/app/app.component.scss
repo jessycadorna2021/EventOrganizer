@@ -1,0 +1,18 @@
+ion-app{
+	--background: pink;
+	ion-menu{
+		ion-header{
+			ion-toolbar{
+				--background: pink;
+			}
+		}
+	}
+}
+ion-content{
+	--background: pink;
+	ion-list{
+		ion-item{
+			--background: pink;
+		}
+	}
+}

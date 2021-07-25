@@ -1,0 +1,16 @@
+ion-toolbar{
+		--background: pink;
+	}
+	ion-content{
+		ion-item{
+			ion-label{
+			color: black;
+			}
+			ion-input{
+			color: black;
+			}
+			ion-select{
+			color: black;
+			}
+		}
+	}

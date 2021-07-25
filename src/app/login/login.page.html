@@ -1,0 +1,46 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-title style="color: black">
+      EVENT ORGANIZER
+    </ion-title>
+    <ion-buttons  style="color: black" routerLink="/register" slot="end">
+      <ion-button >SIGN UP</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="secondary" padding>
+  <div style="margin-left: 35%; margin-top: 5%">
+  <form id="#form">
+    <ion-grid>
+      <ion-row color="primary" justify-content-center>
+        <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+          <div text-center>
+            <center><h3><b style="color: black">USER LOGIN</b></h3></center>
+          </div>
+          <br>
+          <div padding>
+            <ion-item>
+              <ion-input name="username" required type="text" placeholder="Username" required [(ngModel)]="log_username"></ion-input>
+            </ion-item>
+            <br>
+            <ion-item>
+              <ion-input name="password" type="password" placeholder="Password" required [(ngModel)]="log_password"></ion-input>
+            </ion-item>
+          </div>
+          <br><br>
+          <div padding>
+            <ion-button routerLink="/home" size="large" type="submit" expand="block">Login</ion-button>
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+          <div>
+          <h6 id="admin" style="color: black">Login as <a routerLink='/admin'>
+          Administrator</a></h6>
+          </div>
+      </ion-row>
+    </ion-grid>
+  </form>
+</div>
+</ion-content>
